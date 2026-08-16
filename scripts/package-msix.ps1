@@ -16,7 +16,7 @@ if (!(Test-Path $manifestSource)) { throw "Package.appxmanifest was not found." 
 Write-Host "[2/3] Applying the Partner Center identity values..."
 $manifest = Get-Content $manifestSource -Raw
 $identityName = if ($env:STORE_IDENTITY_NAME) { $env:STORE_IDENTITY_NAME } else { "38959708.ZQTextSandbox8F4K2" }
-$publisher = if ($env:STORE_PUBLISHER) { $env:STORE_PUBLISHER } else { "CN=C6ECECE36-E415-4146-A175-E0B24E2A5BE2" }
+$publisher = if ($env:STORE_PUBLISHER) { $env:STORE_PUBLISHER } else { "CN=C6CECE36-E415-4146-A175-E0B24E2A5BE2" }
 $publisherDisplayName = if ($env:STORE_PUBLISHER_DISPLAY_NAME) { $env:STORE_PUBLISHER_DISPLAY_NAME } else { "罗运来" }
 $manifest = $manifest.Replace("YOUR_STORE_IDENTITY_NAME", $identityName)
 $manifest = $manifest.Replace("CN=YOUR_STORE_PUBLISHER", $publisher)

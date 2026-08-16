@@ -63,7 +63,7 @@ Partner Center：
 包身份已经写入 `Package.appxmanifest`：
 
 - Identity：`38959708.ZQTextSandbox8F4K2`
-- Publisher：`CN=C6ECECE36-E415-4146-A175-E0B24E2A5BE2`
+- Publisher：`CN=C6CECE36-E415-4146-A175-E0B24E2A5BE2`
 - Publisher display name：`罗运来`
 
 Store 提交使用未签名包；认证通过后由 Store 处理发布签名。

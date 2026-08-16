@@ -77,7 +77,7 @@ function applyStoreIdentity(manifest) {
   const publisherDisplayName = process.env.STORE_PUBLISHER_DISPLAY_NAME;
   let result = manifest
     .replaceAll('YOUR_STORE_IDENTITY_NAME', identityName || '38959708.ZQTextSandbox8F4K2')
-    .replaceAll('CN=YOUR_STORE_PUBLISHER', publisher || 'CN=C6ECECE36-E415-4146-A175-E0B24E2A5BE2')
+    .replaceAll('CN=YOUR_STORE_PUBLISHER', publisher || 'CN=C6CECE36-E415-4146-A175-E0B24E2A5BE2')
     .replaceAll('YOUR_PUBLISHER_DISPLAY_NAME', publisherDisplayName || '罗运来');
 
   if (identityName) {

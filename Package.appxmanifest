@@ -6,7 +6,7 @@
   IgnorableNamespaces="uap rescap">
   <Identity
     Name="38959708.ZQTextSandbox8F4K2"
-    Publisher="CN=C6ECECE36-E415-4146-A175-E0B24E2A5BE2"
+    Publisher="CN=C6CECE36-E415-4146-A175-E0B24E2A5BE2"
     Version="1.0.0.0"
     ProcessorArchitecture="x64" />
   <Properties>
