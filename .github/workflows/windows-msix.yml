@@ -1,0 +1,33 @@
+name: Build Windows MSIX
+
+on:
+  workflow_dispatch:
+
+jobs:
+  package:
+    runs-on: windows-latest
+    env:
+      STORE_IDENTITY_NAME: ${{ secrets.STORE_IDENTITY_NAME }}
+      STORE_PUBLISHER: ${{ secrets.STORE_PUBLISHER }}
+      STORE_PUBLISHER_DISPLAY_NAME: ${{ secrets.STORE_PUBLISHER_DISPLAY_NAME }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Validate source
+        run: npm run validate
+      - name: Build MSIX
+        run: npm run package:msix
+      - name: Upload MSIX artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ZQTextSandbox8F4K2-msix
+          path: |
+            out/*.msix
+            out/*.msixupload

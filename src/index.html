@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none';" />
+    <title>ZQ Text Sandbox 8F4K2</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">Q</div>
+          <div>
+            <div class="brand-name">ZQ Text Sandbox 8F4K2</div>
+            <div class="brand-subtitle">文字工具</div>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <span id="modeBadge" class="mode-badge">FREE</span>
+          <button id="sampleButton" class="ghost-button" type="button">示例</button>
+        </div>
+      </header>
+
+      <main>
+        <div class="page-heading">
+          <div>
+            <h1>文字处理</h1>
+            <p>粘贴文字，点击功能。</p>
+          </div>
+          <div class="feature-summary">
+            <span>免费：去空格 · 合并空格 · 删重复行 · 排序</span>
+            <span>Pro：JSON 美化 · 标题格式</span>
+          </div>
+        </div>
+
+        <section class="workspace-card">
+          <div class="editor-grid">
+            <label class="editor-panel">
+              <span class="editor-heading">输入文字</span>
+              <textarea id="inputText" spellcheck="false" placeholder="粘贴文字…"></textarea>
+            </label>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <label class="editor-panel output-panel">
+              <span class="editor-heading">处理结果</span>
+              <textarea id="outputText" spellcheck="false" readonly placeholder="结果显示在这里…"></textarea>
+            </label>
+          </div>
+
+          <div class="toolbar">
+            <div class="toolbar-group">
+              <span class="toolbar-label free-label">免费</span>
+              <button class="operation-button" data-operation="trim" data-label="去首尾空格" type="button">去首尾空格</button>
+              <button class="operation-button" data-operation="spaces" data-label="合并空格" type="button">合并空格</button>
+              <button class="operation-button" data-operation="dedupe" data-label="删重复行" type="button">删重复行</button>
+              <button class="operation-button" data-operation="sort" data-label="按字母排序" type="button">按字母排序</button>
+            </div>
+            <div class="toolbar-group">
+              <span class="toolbar-label pro-label">Pro</span>
+              <button class="operation-button pro-button locked" data-operation="json" data-pro="true" data-label="JSON 美化" type="button">JSON 美化</button>
+              <button class="operation-button pro-button locked" data-operation="title" data-pro="true" data-label="标题格式" type="button">标题格式</button>
+            </div>
+          </div>
+
+          <div class="workspace-actions">
+            <button id="clearButton" class="ghost-button" type="button">清空</button>
+            <button id="copyButton" class="primary-button" type="button">复制结果</button>
+          </div>
+        </section>
+
+        <section class="license-card">
+          <div class="license-copy">
+            <div class="license-title"><strong>Pro 激活</strong><span class="pro-pill">JSON 美化 · 标题格式</span></div>
+            <span id="licenseState" class="license-state">免费版 · 输入激活码解锁 Pro</span>
+          </div>
+          <form id="licenseForm" class="license-form">
+            <input id="licenseInput" autocomplete="off" placeholder="输入激活码" aria-label="Pro 激活码" />
+            <button class="primary-button" type="submit">激活</button>
+          </form>
+          <button id="deactivateButton" class="text-button" type="button" hidden>退出 Pro</button>
+        </section>
+
+        <div class="local-note">本地处理 · 无账号 · 无网络</div>
+      </main>
+
+      <footer class="footer">ZQ Text Sandbox 8F4K2 · 版本 1.0.0</footer>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="./renderer.js"></script>
+  </body>
+</html>

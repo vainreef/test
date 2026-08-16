@@ -1,0 +1,7 @@
+node_modules/
+out/
+secrets/
+devcert.pfx
+.DS_Store
+*.log
+.winapp/
