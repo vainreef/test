@@ -5,3 +5,4 @@ devcert.pfx
 .DS_Store
 *.log
 .winapp/
+.tools/

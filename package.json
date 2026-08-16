@@ -14,7 +14,9 @@
     "license:keys": "node scripts/license.cjs keys",
     "license:generate": "node scripts/license.cjs generate",
     "package:win": "electron-packager . ZQTextSandbox8F4K2 --platform=win32 --arch=x64 --out=out --overwrite --asar --prune=true --ignore=^/out --ignore=^/.git --ignore=^/secrets",
-    "package:msix": "powershell -ExecutionPolicy Bypass -File scripts/package-msix.ps1"
+    "package:msix": "node scripts/package-msix.mjs",
+    "package:msix:mac": "node scripts/package-msix-mac.mjs",
+    "package:msix:build-tool": "bash scripts/build-makemsix-mac.sh"
   },
   "devDependencies": {
     "electron": "43.4.0",
